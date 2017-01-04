@@ -1,0 +1,31 @@
+'use strict';
+
+function Cup(type, size) {
+  this.type = type;
+  this.size = size;
+  this.isOpen = false;
+}
+
+Cup.prototype.open = function() {
+  this.isOpen = true;
+  console.log("The cup is open");
+  return "The cup is open";
+};
+
+Cup.prototype.close = function() {
+  this.isOpen = false;
+    console.log("The cup is open");
+  return "The cup is closed";
+};
+
+const newCup = new Cup("hot cup", "large");
+const newCup2 = new Cup("cold cup", "small");
+
+newCup.open();
+console.log(newCup);
+newCup.close();
+console.log(newCup);
+newCup.open();
+console.log(newCup2);
+newCup.close();
+console.log(newCup2);
